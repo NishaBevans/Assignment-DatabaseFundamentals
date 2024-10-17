@@ -1,0 +1,45 @@
+#Task 1L Design a normalized database schema for "Book Haven".
+#Identify and create tables such as Books, Authors, Customers, and Transactions.
+#Define columns for each table with appropriate data types and constraints.
+
+Authors
+------------------------
+| AuthorID (PK)       |
+| FirstName           |
+| LastName            |
+| Biography           |
+| BirthDate           |
+------------------------
+
+Books
+------------------------
+| BookID (PK)         |
+| Title               |
+| AuthorID (FK)      |
+| Genre               |
+| PublishedYear       |
+| ISBN                |
+| Price               |
+| StockQuantity       |
+------------------------
+
+Customers
+------------------------
+| CustomerID (PK)     |
+| FirstName           |
+| LastName            |
+| Email (UNIQUE)      |
+| PhoneNumber         |
+| Address             |
+| JoinDate            |
+------------------------
+
+Transactions
+------------------------
+| TransactionID (PK)  |
+| CustomerID (FK)     |
+| BookID (FK)         |
+| TransactionDate      |
+| Quantity            |
+| TotalAmount         |
+------------------------
